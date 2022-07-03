@@ -1,0 +1,253 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="vh-100 position-relative d-flex justify-content-center align-items-center bg-light overflow-hidden">
+        <!-- Adding navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navPosition container-fluid">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <div class="d-flex">
+                    <div class="logo-div d-flex justify-content-center align-items-center me-2">
+                        <h2>Q</h2>
+                    </div>
+
+                    <div class="d-flex align-items-center ms-2">
+                        <h3 class="fw-800">Quiz App</h3>
+                    </div>
+                </div>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <!-- End of navbar -->
+
+
+
+
+
+
+        <!-- Quiz setup -->
+        <div class="w-vw h-75 bg-white position-absolute z-999 p-4 overflow-scroll-y" id="quizSetup">
+            <h2 class="text-center mb-5">Quiz setup</h2>
+            <h4 class="mb-4">Category</h4>
+            <div class="d-flex flex-column justify-content-between align-items-center" >
+                <div class="row gy-3 container-fluid">
+                    <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center align-items-center">
+                        <div class="d-flex flex-column justify-content-between align-items-center bg-light w-100 h-100 my-3 py-2 text-theme rounded-adjust icon-hover cursor-pointer" id="animals">
+                            <i class="fa-solid fa-paw fs-icons"></i>
+                            <h6>Animals</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center align-items-center">
+                        <div class="d-flex flex-column justify-content-between align-items-center bg-light w-100 h-100 my-3 py-2 rounded-adjust text-theme icon-hover cursor-pointer" id="videoGames">
+                            <i class="fa-solid fa-gamepad fs-icons"></i>
+                            <h6>Video games</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center align-items-center">
+                        <div class="d-flex flex-column justify-content-between align-items-center bg-light w-100 h-100 my-3 py-3 rounded-adjust text-theme icon-hover cursor-pointer" id="sports">
+                            <i class="fa-solid fa-volleyball fs-icons"></i>
+                            <h6>Sports</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center align-items-center">
+                        <div class="d-flex flex-column justify-content-between align-items-center bg-light w-100 h-100 my-3 py-3 rounded-adjust text-theme icon-hover cursor-pointer" id="science">
+                            <i class="fa-solid fa-computer fs-icons"></i>
+                            <h6>Science (computers)</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center align-items-center">
+                        <div class="d-flex flex-column justify-content-between align-items-center bg-light w-100 h-100 my-3 py-3 rounded-adjust text-theme icon-hover cursor-pointer" id="history">
+                            <img src="images/icons8-history-64.png" class="image-icon" alt="">
+                            <h6>History</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center align-items-center">
+                        <div class="d-flex flex-column justify-content-between align-items-center bg-light w-100 h-100 my-3 py-3 rounded-adjust text-theme icon-hover cursor-pointer" id="generalKnowledge">
+                            <i class="fa-solid fa-house-chimney-medical fs-icons"></i>
+                            <h6>General Knowledge</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="my-4">Difficulty</h4>
+            <div class="row gy-3 container-fluid">
+                <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center align-items-center">
+                    <div class="d-flex flex-column justify-content-between align-items-center bg-light w-100 h-100 my-3 py-3 rounded-adjust text-theme icon-hover cursor-pointer" id="easy">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="fa-solid fa-star fs-4"></i>
+                        </div>
+                        <h6>Easy</h6>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center align-items-center">
+                    <div class="d-flex flex-column justify-content-between align-items-center bg-light w-100 h-100 my-3 py-3 rounded-adjust text-theme icon-hover cursor-pointer" id="medium">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="fa-solid fa-star fs-4"></i>
+                            <i class="fa-solid fa-star fs-4"></i>
+                        </div>
+                        <h6>Medium</h6>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center align-items-center">
+                    <div class="d-flex flex-column justify-content-between align-items-center bg-light w-100 h-100 my-3 py-3 rounded-adjust text-theme icon-hover cursor-pointer" id="hard">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="fa-solid fa-star fs-4"></i>
+                            <i class="fa-solid fa-star fs-4"></i>
+                            <i class="fa-solid fa-star fs-4"></i>
+                        </div>
+                        <h6>Hard</h6>
+                    </div>
+                </div>
+            </div>
+
+
+            <h4 class="my-4">No Of Questions</h4>
+            <input type="text" class="form-control w-100" id="nOfQuestions" placeholder="from 1 to 99">
+
+            <div class="d-flex justify-content-center align-items-center conyainer-fluid mt-3">
+                <button class="btn bg-theme my-3 mx-5 px-5 fs-4 text-white py-2" id="startButton">Start Quiz</button>
+            </div>
+        </div>
+        <!-- End of quiz setup -->
+
+
+
+
+
+        <!-- Start of quiz countdown -->
+        <div class="w-vw h-75 bg-white position-absolute z-999 p-4 overflow-scroll-y" id="startQuizCounter">
+            <div class="d-flex justify-content-center align-items-center w-100 h-100 position-relative">
+                <div id="circle"></div>
+                <h2 class="position-absolute" id="startCount"></h2>
+            </div>
+        </div>
+        <!-- End of quiz countdown -->
+
+
+
+        <!-- Start Quiz section -->
+        <div class="w-vw h-75 bg-white position-absolute z-999 p-4 overflow-scroll-y" id="startQuiz">
+            <div class="countersSection d-flex justify-content-between align-items-center">
+                <div class="position-relative">
+                    <div class="position-absolute" id="remainder"></div>
+                    <div id="noofQuestions"></div>
+                </div>
+
+                <div class="position-relative">
+                    <div class="position-absolute" id="questionTimer"></div>
+                    <div id="timerProgress"></div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <h4 id="question"></h4>
+                <div class="" id="MCQDiv"></div>
+            </div>
+
+            <button class="btn bg-theme" id="submitButton">Submit</button>
+
+
+        </div>
+        <!-- End of Quiz Section -->
+
+
+
+        <!--start of right div -->
+        <div class="w-vw h-75 bg-white position-absolute z-999 p-4 overflow-scroll-y" id="rightDiv">
+            <div class="d-flex justify-content-center align-items-center w-100 h-100 position-relative">
+                <div class="rightWrong bg-success text-white">
+                    <i class="fa-solid fa-check fs-100"></i>
+                </div>
+            </div>
+        </div>
+        <!-- end of right div -->
+
+
+
+        <!--start of wrong div -->
+        <div class="w-vw h-75 bg-white position-absolute z-999 p-4 overflow-scroll-y" id="wrongDiv">
+            <div class="d-flex justify-content-center align-items-center w-100 h-100 position-relative">
+                <div class="rightWrong bg-danger text-white">
+                    <i class="fa-solid fa-xmark fs-100"></i>
+                </div>
+            </div>
+        </div>
+        <!-- end of wrong div -->
+
+
+        <!--start of results section div -->
+        <div class="w-vw h-75 bg-white position-absolute z-999 p-4 overflow-scroll-y" id="resultsSection">
+            <h2>results</h2>
+        </div>
+        <!-- end of results section div -->
+
+
+
+
+
+
+
+        <!-- adding svg at the bottom left of the website -->
+        <img src="images/Check sheet questionnaire free icon 2.svg" class="bottom-left-svg" alt="">
+        <!-- end of bottom left svg -->
+
+        <!-- Bottom right svg -->
+        <img src="images/Quiz Free icon 2.svg" class="bottom-right-svg" alt="">
+        <!-- end of bottom right svg -->
+
+        <!-- student imgae -->
+        <img src="images/kisspng-student-t-shirt-estudante-backpack-black-students-5a82a46caa4bb8.4948825015185112126976.png" class="student" alt="">
+        <!-- end of student image -->
+    </header>
+    
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="node_modules/jquery-circle-progress/dist/circle-progress.min.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

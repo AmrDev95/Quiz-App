@@ -1,0 +1,125 @@
+:root{
+    --main-color: rgb(30,133,254);
+}
+
+.navPosition{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999;
+}
+
+.w-60{
+    width: 60%;
+}
+
+.logo-div{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.fw-800{
+    font-weight: 800;
+}
+
+.bottom-left-svg{
+    width: 30vw;
+    position: absolute;
+    bottom: 10vw;
+    left: 0%;
+    transform: rotate(-10deg);
+    opacity: 0.2;
+}
+
+.bottom-right-svg{
+    width: 30vw;
+    position: absolute;
+    bottom: -10vw;
+    right: 0%;
+    transform: rotate(15deg);
+    opacity: 0.2;
+}
+
+.z-999{
+    z-index: 999;
+}
+
+.student{
+    width: 300px;
+    position: absolute;
+    right: 3vw;
+    top: 50%;
+    transform: translate(25%, -50%);
+    z-index: 0;
+}
+
+.w-vw{
+    width: 75vw;
+}
+
+.fs-icons{
+    font-size: 40px;
+}
+
+.rounded-adjust{
+    border-radius: 30px;
+}
+
+.text-theme{
+    color: var(--main-color);
+}
+
+.overflow-scroll-y{
+    overflow-y: auto;
+}
+
+.image-icon{
+    width: 40px;
+}
+
+.bg-theme{
+    background-color: var(--main-color) !important;
+}
+
+.icon-hover{
+    transition: all 0.5s;
+}
+
+.icon-hover:hover{
+    color: white;
+    background-color: var(--main-color) !important;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+#startQuizCounter{
+    display: none;
+}
+
+#startQuiz, #rightDiv, #wrongDiv, #resultsSection{
+    display: none;
+}
+
+#remainder, #questionTimer{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rightWrong{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.fs-100{
+    font-size: 100px;
+}
