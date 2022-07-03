@@ -3,9 +3,10 @@
 import { Quiz } from "./Quiz.js";
 
 export class Progress{
-    constructor(isStatic, circlediv, size, numberOfQuestions, duration, counter, toFadeOut, toFadeIn, quizResults){
+    constructor(isStatic, circlediv, size, numberOfQuestions, duration, counter, toFadeOut, toFadeIn, quizResults, del=false){
         this.isStatic = isStatic;
         this.circlediv = circlediv;
+        this.del = del;
         this.size= size;
         if(this.isStatic==true){
             this.numberOfQuestions = numberOfQuestions;
@@ -61,7 +62,8 @@ export class Progress{
         let x = setInterval(() => {
             secondsLeft--;
             this.counter.innerHTML = `${secondsLeft}`;
-            if(secondsLeft==0){
+            console.log(this.del);
+            if(secondsLeft==0 || this.del == true){
                 clearInterval(x);
                 if(this.toFadeOut !=''){
                     $(`#${this.toFadeOut}`).fadeOut(500, ()=>{

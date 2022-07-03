@@ -20,6 +20,7 @@ export class Quiz {
 
     displayQuestion(index){
         this.createProgress();
+        this.setInterval();
         document.getElementById('remainder').innerHTML = `Q${this.counter}`;
         document.getElementById('question').innerHTML = this.questionsArray[index].question;
         let answersArray = [this.questionsArray[index].correct_answer, ...this.questionsArray[index].incorrect_answers];
@@ -31,7 +32,7 @@ export class Quiz {
         for(let i= 0; i<answersArray.length; i++){
             container +=`
             <div class="form-check">
-            <input type="radio" name="answers" value="${answersArray[i]}" class="form-check-input" />
+            <input type="radio" name="answers" value="${answersArray[i]}" class="form-check-input" checked/>
             <label class="form-check-label">${answersArray[i]}</label>
         </div>
             `;
@@ -42,7 +43,7 @@ export class Quiz {
 
     createProgress(){
         new Progress(true, 'noofQuestions', 100, this.counter/this.numberOfQuestions);
-        new Progress(false, 'timerProgress', 100,'', 30000, document.getElementById('questionTimer'), '', '');
+        this.x = new Progress(false, 'timerProgress', 100,'', 30000, document.getElementById('questionTimer'), '', '');
     }
 
 
@@ -67,6 +68,8 @@ export class Quiz {
 
       nextQuestion(){
         this.counter++;
+        this.x.del = true;
+        new Progress(false, 'timerProgress', 100,'', 30000, document.getElementById('questionTimer'), '', '', '', true);
         let userAnswer = this.toFilter.filter(elem=>elem.checked)[0].value;
         if(userAnswer == this.questionsArray[this.questionIndex].correct_answer){
             this.questionIndex++;
@@ -123,6 +126,18 @@ export class Quiz {
             
         }
       }
+
+
+      setInterval(){
+        let timeLeft = document.getElementById('questionTimer');
+        let y = setInterval(() => {
+            if(timeLeft.innerHTML == 0){
+                clearInterval(y);
+                this.nextQuestion();
+            }
+        }, 1000);
+        }
+      
 
 
 }
